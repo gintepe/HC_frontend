@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 app.debug = True
@@ -6,7 +6,7 @@ app.debug = True
 
 @app.route('/')
 def home():
-    return "YES"
+    return render_template('video.html')
 
 if __name__ == "__main__":
     app.run()
