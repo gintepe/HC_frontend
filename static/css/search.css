@@ -1,9 +1,9 @@
 .search-container{
-  padding-top: 50px;
+  padding-top: 20px;
   display: block;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 60px;
 }
 
 input#search-bar{
@@ -20,7 +20,7 @@ input#search-bar{
 .search-icon{
   position: relative;
   float: right;
-  width: 75px;
+  width: 105px;
   height: 75px;
   top: -62px;
   right: -45px;
