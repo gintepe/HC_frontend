@@ -1,4 +1,4 @@
-var chart = new SmoothieChart({grid:{strokeStyle:'#f5f5f5', fillStyle:'#f5f5f5', borderVisible:false},minValue:50, maxValue:115, responsive:true, labels:{disabled:true} }),
+var chart = new SmoothieChart({grid:{strokeStyle:'#f5f5f5', fillStyle:'#f5f5f5', borderVisible:false}, labels:{disabled:true} }),
     canvas = document.getElementById('graph'),
     series = new TimeSeries();
 
@@ -25,7 +25,7 @@ setInterval(function () {
     } else if ( hr_data[index]['hr'] > max.innerText ) {
         max.innerText = Math.round(hr_data[index]['hr']);
     }
-
+    document.getElementById('hr').innerText = hr_data[index]['hr'];
 }, 1000);
 
 

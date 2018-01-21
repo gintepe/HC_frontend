@@ -111,7 +111,6 @@ body {
 
 #graph {
   width: 100% !important;
-  height: 96px !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .bbox {
@@ -121,5 +120,12 @@ body {
   position: absolute;
   left: calc(40%);
   top: calc(10%); }
+
+#hr {
+  position: absolute;
+  font-family: "Open Sans";
+  width: 100%;
+  text-align: center;
+  font-size: 30px; }
 
 /*# sourceMappingURL=main.css.map */
