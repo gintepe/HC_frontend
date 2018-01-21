@@ -1,4 +1,4 @@
-var chart = new SmoothieChart({grid:{strokeStyle:'#f5f5f5', fillStyle:'#f5f5f5', borderVisible:false},minValue:50, maxValue:115, responsive:true, labels:{disabled:true} }),
+var chart = new SmoothieChart({grid:{strokeStyle:'#f5f5f5', fillStyle:'#f5f5f5', borderVisible:false},minValue:80, maxValue:95, responsive:true, labels:{disabled:true} }),
     canvas = document.getElementById('graph'),
     series = new TimeSeries();
 
