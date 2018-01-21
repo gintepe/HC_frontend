@@ -21,8 +21,8 @@
         chart.streamTo(canvas, 1000);
 
         setInterval(function () {
-
             series.append(new Date().getTime(), person['hr'][index]);
+            $('.p' + j + ' .hr-live').text(Math.round(person['hr'][index]));
             index += 1;
         }, 1000)
     });

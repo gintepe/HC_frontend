@@ -162,8 +162,19 @@ body {
   width: 60px !important; }
 .people-2 .col-name-person, .people-3 .col-name-person {
   height: 60px !important;
-  width: 60px !important; }
+  width: 100%; }
+.people-2 .col-person-photo, .people-3 .col-person-photo {
+  width: initial; }
 .people-2 .hr-live-wrap, .people-3 .hr-live-wrap {
-  float: right; }
+  margin-top: -7px; }
+  .people-2 .hr-live-wrap .hr-live, .people-3 .hr-live-wrap .hr-live {
+    right: 40px;
+    margin-top: -37px; }
+
+.p2 .hr-live {
+  animation-delay: 459ms !important; }
+
+.p3 .hr-live {
+  animation: heartbeat 1.3s infinite !important; }
 
 /*# sourceMappingURL=main.css.map */
