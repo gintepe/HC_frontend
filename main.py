@@ -20,7 +20,7 @@ def take():
 @app.route('/cam')
 def cam():
     hr = cameron.hr_data[0]['hr']
-    return render_template('video.html', people=cameron.hr_data, yid=cameron.hr_data[0]['video'], max=round(max(hr)), min=round(min(hr)), average=round(mean(hr)) )
+    return render_template('video.html', people=cameron.hr_data, yid=cameron.hr_data[0]['video'] + "", max=round(max(hr)), min=round(min(hr)), average=round(mean(hr)) )
 
 if __name__ == "__main__":
     app.run()
