@@ -1,7 +1,8 @@
 @import "neat"
 @import "reset"
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300"
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,600"
 @import "material_shadows"
+@import "hearbeat.css"
 
 
 body
@@ -71,6 +72,23 @@ body
       font-size: 12px
       text-align: center
 
+    .hr-live-wrap
+      display: flex
+      justify-content: center
+      .hr-live
+        position: absolute
+        height: 50px
+        width: 50px
+        line-height: 50px
+        text-align: center
+        animation: heartbeat 1s infinite
+        background-image: url(https://marketplace.canva.com/MAB48Xu3f-I/1/thumbnail/canva-heart-icon-MAB48Xu3f-I.png)
+        background-position: center center
+        background-size: cover
+        color: white
+        font-weight: 600
+
+
   .col-person-photo
     width: 30%
 
@@ -83,15 +101,33 @@ body
       border-radius: 3px
 
 
+.row-graph
+  margin-bottom: 10px
 .graph
   +shadow(1)
 
 .row-stats
+  +grid-container(12)
+  padding: 15px 15px
   background-color: #f5f5f5
+  font-family: "Open Sans"
+  font-size: 30px
   +shadow(1)
 
-.people-1
-  .row
+  .stat-value
+    font-size: 25px
+  .stat-name
+    margin-bottom: 5px
+  & > div
+    text-align: center
+    +grid-column(4)
+    & > span
+      display: block
+
+
+.people-3
+  .row-stats
+    display: none
 
 
 .bbox
@@ -101,4 +137,5 @@ body
   position: absolute
   left: calc(40%)
   top: calc(10%)
+
 

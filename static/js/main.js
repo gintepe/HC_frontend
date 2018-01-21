@@ -1,8 +1,10 @@
 // $(function () {
-    var crow = $('.canvas-row');
+    var crow = $('.row-graph');
     function resize_graph() {
         $('.graph').attr('width', crow.width());
         $('.graph').attr('height', $('.col-name-person').height());
+
+        // $('.row-stats').height($('.row-video').outerHeight(true) - $('.row-graph').outerHeight(true) - $('.row-person-info').outerHeight(true))
     }
     $(window).resize(resize_graph);
     resize_graph();

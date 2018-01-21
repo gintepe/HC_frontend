@@ -8,7 +8,7 @@ app.debug = True
 def home():
     for i, person in enumerate(hr_data):
         hr_data[i]['img_url'] = "https://imgur.com/IFYVIH4.png"
-    return render_template('video.html', people=hr_data[:1])
+    return render_template('video.html', people=hr_data)
 
 if __name__ == "__main__":
     app.run()

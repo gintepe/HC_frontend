@@ -1,4 +1,5 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,600";
+@import url(hearbeat.css);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -96,6 +97,21 @@ body {
     .row-person-info .col-name-person .person-title {
       font-size: 12px;
       text-align: center; }
+    .row-person-info .col-name-person .hr-live-wrap {
+      display: flex;
+      justify-content: center; }
+      .row-person-info .col-name-person .hr-live-wrap .hr-live {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        animation: heartbeat 1s infinite;
+        background-image: url(https://marketplace.canva.com/MAB48Xu3f-I/1/thumbnail/canva-heart-icon-MAB48Xu3f-I.png);
+        background-position: center center;
+        background-size: cover;
+        color: white;
+        font-weight: 600; }
   .row-person-info .col-person-photo {
     width: 30%; }
     .row-person-info .col-person-photo .person-photo {
@@ -105,12 +121,36 @@ body {
       width: 120px;
       border-radius: 3px; }
 
+.row-graph {
+  margin-bottom: 10px; }
+
 .graph {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .row-stats {
+  padding: 15px 15px;
   background-color: #f5f5f5;
+  font-family: "Open Sans";
+  font-size: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .row-stats::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .row-stats .stat-value {
+    font-size: 25px; }
+  .row-stats .stat-name {
+    margin-bottom: 5px; }
+  .row-stats > div {
+    text-align: center;
+    width: calc(33.3333333333% - 26.6666666667px);
+    float: left;
+    margin-left: 20px; }
+    .row-stats > div > span {
+      display: block; }
+
+.people-3 .row-stats {
+  display: none; }
 
 .bbox {
   height: 150px;
