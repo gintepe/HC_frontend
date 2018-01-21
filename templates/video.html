@@ -12,7 +12,6 @@
       src="https://code.jquery.com/jquery-3.3.0.min.js"
       integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4="
       crossorigin="anonymous"></script>
-    <script src="http://mbostock.github.com/d3/d3.v2.js"></script>
 
 </head>
 <body>
@@ -25,12 +24,12 @@
         <div class="row-video">
             <div class="video">
                 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-                <div class='embed-container'><iframe src='https://www.youtube.com/embed/6-Hk_po6KGI' frameborder='0' allowfullscreen></iframe></div>                <div class="bbox"></div>
+                <div class='embed-container'><iframe src='https://www.youtube.com/embed/AKrxmTLLUkk' frameborder='0' allowfullscreen></iframe></div>                <div class="bbox"></div>
 
             </div>
             <div class="info people-{{ people|length }}">
                 {% for person in people %}
-                <div class="person">
+                <div class="person p{{ loop.index }}">
                     <div class="row-person-info">
                         <div class="col-person-photo">
                             <div style="background-image: url('{{ person.img_url }}')" class="person-photo"></div>
@@ -43,7 +42,7 @@
                         </div>
                     </div>
                     <div class="row-graph">
-                        <canvas class="graph"></canvas>
+                        <canvas class="graph g{{ loop.index }}"></canvas>
                     </div>
                     <div class="row-stats">
                         <div><span class="stat-name">Max</span> <span class="stat-value">105</span></div>

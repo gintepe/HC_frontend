@@ -58,12 +58,10 @@ body {
   #header h1 {
     margin-right: 8px; }
 
-.row-video {
-  display: flex; }
-  .row-video::after {
-    clear: both;
-    content: "";
-    display: block; }
+.row-video::after {
+  clear: both;
+  content: "";
+  display: block; }
 
 .video {
   position: relative;
@@ -159,5 +157,14 @@ body {
   position: absolute;
   left: calc(40%);
   top: calc(10%); }
+
+.people-2 .person-photo, .people-3 .person-photo {
+  height: 60px !important;
+  width: 60px !important; }
+.people-2 .col-name-person, .people-3 .col-name-person {
+  height: 60px !important;
+  width: 60px !important; }
+.people-2 .hr-live-wrap, .people-3 .hr-live-wrap {
+  float: right; }
 
 /*# sourceMappingURL=main.css.map */
