@@ -15,8 +15,10 @@
         var index = 0;
         var min = document.getElementById('min');
         var max = document.getElementById('max');
+        var avg = document.getElementById('avg');
         max.innerText = Math.round(person['hr'][index]);
         min.innerText = Math.round(person['hr'][index]);
+        avg.innerText = Math.round(person['hr'][index]);
         var chart = new SmoothieChart(chart_settings),
         canvas = document.getElementsByClassName('g' + j)[0],
         series = new TimeSeries();
@@ -31,6 +33,11 @@
             } else if ( person['hr'][index] > max.innerText ) {
                 max.innerText = Math.round(person['hr'][index]);
             }
+            var sum = 0;
+            for (i = 0; i <= index; i++) {
+                sum += person['hr'][i]
+            }
+            avg.innerText = Math.round(sum/(index+1));
             index += 1;
         }, 1000)
     });
