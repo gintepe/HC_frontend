@@ -32,6 +32,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  background: #dadada;
+  min-width: 1100px; }
+
 #header {
   height: 60px;
   line-height: 60px;
@@ -53,64 +57,59 @@ table {
   #header h1 {
     margin-right: 8px; }
 
-body {
-  background: #dadada; }
-
-.row-video::after {
-  clear: both;
-  content: "";
-  display: block; }
+.row-video {
+  display: flex; }
+  .row-video::after {
+    clear: both;
+    content: "";
+    display: block; }
 
 .video {
   position: relative;
-  height: 500px;
   background-color: black;
   width: calc(66.6666666667% - 33.3333333333px);
   float: left;
   margin-left: 20px; }
 
 .info {
-  height: 500px;
   width: calc(33.3333333333% - 26.6666666667px);
   float: left;
   margin-left: 20px; }
 
-.person-info-row {
+.row-person-info {
   display: flex;
   padding: 10px 10px;
-  background-color: #f5f5f5;
   margin-bottom: 10px;
+  background-color: #f5f5f5;
+  font-family: "Open Sans";
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .row-person-info .col-name-person {
+    height: 120px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .row-person-info .col-name-person .person-name {
+      color: black;
+      font-size: 20px;
+      text-align: center; }
+    .row-person-info .col-name-person .person-title {
+      font-size: 12px;
+      text-align: center; }
+  .row-person-info .col-person-photo {
+    width: 30%; }
+    .row-person-info .col-person-photo .person-photo {
+      background-position: center center;
+      background-size: cover;
+      height: 120px;
+      width: 120px;
+      border-radius: 3px; }
+
+.graph {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-.person-name-col {
-  height: 120px;
-  width: 70%;
-  margin-right: 10px;
-  font-family: "Open Sans";
-  color: black;
-  font-size: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.person-subtitle {
-  font-size: 12px; }
-
-.person-photo-col {
-  height: 120px;
-  width: 30%; }
-
-.person-photo {
-  background-image: url("https://imgur.com/IFYVIH4.png");
-  background-position: center center;
-  background-size: cover;
-  height: 120px;
-  width: 120px;
-  border-radius: 3px; }
-
-#graph {
-  width: 100% !important;
+.row-stats {
+  background-color: #f5f5f5;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .bbox {
@@ -120,12 +119,5 @@ body {
   position: absolute;
   left: calc(40%);
   top: calc(10%); }
-
-#hr {
-  position: absolute;
-  font-family: "Open Sans";
-  width: 100%;
-  text-align: center;
-  font-size: 30px; }
 
 /*# sourceMappingURL=main.css.map */

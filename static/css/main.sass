@@ -3,7 +3,11 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300"
 @import "material_shadows"
 
-$card-color: white
+
+body
+  background: #dadada
+  min-width: 1100px //todo make the layout responsive
+
 #header
   height: 60px
   line-height: 60px
@@ -27,64 +31,68 @@ $card-color: white
   h1
     margin-right: 8px
 
-body
-  background: #dadada
 
 
 .row-video
+  display: flex
   +grid-container(12)
 
 .video
   position: relative
-  height: 500px
   background-color: black
   +grid-column(8)
 
 .info
-  height: 500px
   +grid-column(4)
 
-
-
-.person-info-row
+.row-person-info
   display: flex
   padding: 10px 10px
-  background-color: #f5f5f5
   margin-bottom: 10px
-  +shadow(1)
 
-
-.person-name-col
-  height: 120px
-  width: 70%
-  margin-right: 10px
+  background-color: #f5f5f5
   font-family: "Open Sans"
-  color: black
-  font-size: 20px
-  text-align: center
-  display: flex
-  flex-direction: column
-  justify-content: center
-
-.person-subtitle
-  font-size: 12px
-
-.person-photo-col
-  height: 120px
-  width: 30%
-
-.person-photo
-  background-image: url("https://imgur.com/IFYVIH4.png")
-  background-position: center center
-  background-size: cover
-  height: 120px
-  width: 120px
-  border-radius: 3px
-
-
-#graph
-  width: 100% !important
   +shadow(1)
+
+
+  .col-name-person
+    height: 120px
+    width: 70%
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    .person-name
+      color: black
+      font-size: 20px
+      text-align: center
+
+    .person-title
+      font-size: 12px
+      text-align: center
+
+  .col-person-photo
+    width: 30%
+
+    .person-photo
+      background-position: center center
+      background-size: cover
+
+      height: 120px
+      width: 120px
+      border-radius: 3px
+
+
+.graph
+  +shadow(1)
+
+.row-stats
+  background-color: #f5f5f5
+  +shadow(1)
+
+.people-1
+  .row
+
 
 .bbox
   height: 150px
@@ -94,10 +102,3 @@ body
   left: calc(40%)
   top: calc(10%)
 
-#hr
-  position: absolute
-  font-family: "Open Sans"
-  width: 100%
-  text-align: center
-
-  font-size: 30px
